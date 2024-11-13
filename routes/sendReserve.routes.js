@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mapsController = require('../controllers/apiMapsController')
+const sendReserveController = require('../controllers/sendReserveController')
 
 
 router.get('/api/maps', mapsController.getReviews)
