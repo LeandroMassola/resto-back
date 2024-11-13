@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const getReviews = require('../controllers/sendReserveController')
+const mapsController = require('../controllers/apiMapsController')
 
 
-router.get('/api/maps', getReviews)
+router.get('/api/maps', mapsController.getReviews)
 router.post('/sendReserve', sendReserveController.sendSms)
 router.get('/confirmReserve/:reservationId', sendReserveController.getReservationById)
 router.post('/confirmReserve', sendReserveController.confirmReserve)
