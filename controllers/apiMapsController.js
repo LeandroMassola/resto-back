@@ -3,7 +3,7 @@ module.exports = {
         try {
             const { input } = req.query;
             const apiKey = process.env.GOOGLE_API_KEY;  // Define esta clave en tu archivo .env en Render.
-            const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=place_id&key=${apiKey}`;
+            const url = `/maps/api/place/findplacefromtext/json?input=${input}&inputtype=textquery&fields=place_id&key=${apiKey}`;
             const response = await fetch(url);
             const data = await response.json();
     
@@ -18,7 +18,7 @@ module.exports = {
         try {
             const { input } = req.query;
             const apiKey = process.env.GOOGLE_API_KEY;
-            const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${input}&fields=reviews,name&key=${apiKey}`
+            const url = `/maps/api/place/details/json?place_id=${input}&fields=reviews,name&key=${apiKey}`
             const response = await fetch(url);
             const data = await response.json();
             res.json(data)
