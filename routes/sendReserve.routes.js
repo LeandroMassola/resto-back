@@ -6,6 +6,7 @@ const sendReserveController = require('../controllers/sendReserveController')
 
 router.get('/api/maps', mapsController.getIdPlace)
 router.get('/getReview', mapsController.getReviews)
+router.get('/getPlaceId', mapsController.getIdPlace)
 router.post('/sendReserve', sendReserveController.sendSms)
 router.get('/confirmReserve/:reservationId', sendReserveController.getReservationById)
 router.post('/confirmReserve', sendReserveController.confirmReserve)
