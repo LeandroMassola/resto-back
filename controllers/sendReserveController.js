@@ -23,7 +23,7 @@ module.exports = {
                     status: 'pending'
                 })
 
-                const confirmUrl = `https://restaurant-site-9yvl.onrender.com/confirmReserve?reservationId=${reservationId}`
+                const confirmUrl = `https://restaurant-site-9yvl.onrender.com/confirmReserve/reservationId=${reservationId}`
 
                 const message = await client.messages.create({
                     body: `Reserva de: ${completeName}, Teléfono: ${phone}, Día y Hora: ${date} ${time}, Cantidad de personas: ${numberOfPeople}, Comentarios: ${commentarys}Confirma o reachaza la reserva siguiendo el enlace: ${confirmUrl}`,
