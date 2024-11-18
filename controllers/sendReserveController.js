@@ -40,7 +40,7 @@ module.exports = {
         },
 
         getReservationById: async (req, res) => {
-            const {reservationId} = req.params
+            const {reservationId} = req.query
             console.log('query: ' + reservationId);
 
             try {
